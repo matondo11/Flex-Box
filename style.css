@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  width:100vw;
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows:100px 1fr 30px;
+  grid-template-areas:
+  "cabecalho cabecalho "
+  "principal principal"
+  "rodape rodape";
+  
+}
+.cabecalho {
+  padding-top: 10px;
+  background-color: blue;
+  grid-area: cabecalho;
+  display: flex;
+  flex-direction: column;
+  justify-content: last baseline;
+  align-items: center;
+}
+
+.principal {
+  padding: 15px 10px 10px 5px;
+  background-color: rgb(39, 201, 120);
+  grid-area: principal;
+  display: grid;
+  grid-template-rows: 1fr 100px;
+  justify-items: center;
+  align-items: center;
+}
+.rodape {
+  background-color: yellow;
+  grid-area: rodape;
+}
+.nav {
+  margin: 10px;
+  background-color: blueviolet;
+  height: 40%;
+  width: 95%;
+  border-radius: 10px;
+}
+.seccao {
+  padding: 10px;
+  background-color: tomato;
+  height: 90%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+}
+.aside {
+  background-color: slategrey;
+  height: 95%;
+  width:100%;
+  border-radius: 10px;
+}
+.artigo {
+  background-color: sienna;
+  height: 70%;
+  border-radius: 10px;
+}
+.artigo2 {
+  background-color: rgb(125, 21, 185);
+  height: 30%;
+  padding: 5px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  border-radius: 10px;
+}
+.extra {
+  background-color: chocolate;
+  height: 90%;
+  width: 50%;
+  border-radius: 10px;
+  grid-area: extra;
+}
+@media screen and(min-width:768px) {
+  body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 1fr 50px;
+    grid-template-areas:
+      "cabecalho cabecalho"
+      "principal principal"
+      "rodape rodape";
+  }
+  .cabecalho {
+    padding-top: 10px;
+    background-color: blue;
+    grid-area: cabecalho;
+    display: flex;
+    flex-direction: column;
+    justify-content: last baseline;
+    align-items: center;
+  }
+  
+  .principal {
+    padding: 15px 10px 0px 5px;
+    background-color: rgb(39, 201, 120);
+    grid-area: principal;
+  
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    justify-items: center;
+    align-items: center;
+  }
+  .rodape {
+    background-color: yellow;
+    grid-area: rodape;
+  }
+  .nav {
+    margin: 10px;
+    background-color: blueviolet;
+    height: 40%;
+    width: 95%;
+    border-radius: 10px;
+  }
+  .seccao {
+    padding: 10px;
+    background-color: tomato;
+    height: 90%;
+    width: 96%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+  }
+  .aside {
+    background-color: slategrey;
+    height: 95%;
+    width: 95%;
+    border-radius: 10px;
+  }
+  .artigo {
+    background-color: sienna;
+    height: 70%;
+    width: 100%;
+    border-radius: 10px;
+  }
+  .artigo2 {
+    background-color: rgb(125, 21, 185);
+    height: 30%;
+    width: 99%;
+    padding: 5px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    border-radius: 10px;
+  }
+  .extra {
+    background-color: chocolate;
+    height: 90%;
+    width: 30%;
+    border-radius: 10px;
+    grid-area: extra;
+  }
+  
+}
+@media screen and (min-width: 1024px) {
+  body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 1fr 30px;
+    grid-template-areas:
+      "cabecalho cabecalho cabecalho"
+      "principal principal principal"
+      "rodape rodape rodape";
+  }
+  .cabecalho {
+    padding-top: 10px;
+    background-color:#abb340;
+    grid-area: cabecalho;
+    display: flex;
+    flex-direction: column;
+    justify-content: last baseline;
+    align-items: center;
+  }
+
+  .principal {
+    padding: 15px 10px 0px 5px;
+    background-color:#bfcaff;
+    grid-area: principal;
+
+    display: grid;
+    grid-template-columns:2fr 0.5fr;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: "seccao aside"
+    "seccao aside";
+  }
+  .rodape {
+    background-color:#f6ff75;
+    grid-area: rodape;
+  }
+  .nav {
+    margin: 10px;
+    background-color:#ff645c;
+    height: 40%;
+    width: 95%;
+    border-radius: 10px;
+  }
+  .seccao {
+    grid-area:seccao;
+    padding: 10px;
+    background-color:#b34e49;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+  }
+  .aside {
+    grid-area: aside;
+    background-color:#f16d66cb;
+    border-radius: 10px;
+  }
+  .artigo {
+    background-color:#d5e40d;
+    height: 70%;
+    width: 100%;
+    border-radius: 10px;
+  }
+  .artigo2 {
+    background-color:#dbdf0e;
+    height: 30%;
+    width: 99%;
+    padding: 5px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    border-radius: 10px;
+  }
+  .extra {
+    background-color: rgb(238, 174, 128);
+    height: 90%;
+    width: 30%;
+    border-radius: 10px;
+    grid-area: extra;
+  }
+}
